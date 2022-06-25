@@ -1,0 +1,30 @@
+main{
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+.linha{
+    display: grid;
+    grid-template-columns: 50% 40% 5% 5%;
+    border: 1px solid #888;
+    
+}
+
+.titulo{
+    font-weight: bold;
+    background-color: #000;
+    color: #FFF;
+    padding: 5px;
+}
+.item{
+    padding: 5px;
+    border-bottom: 1px solid #888;
+}
+.remover,
+.editar{
+    text-align: center;
+}
+a{
+    color: #000;
+}
