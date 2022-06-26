@@ -10,10 +10,26 @@
     <body>
         <button type="button" id="listarCliente" onclick="listar()" >Cliente</button>
         <main>
-            <a href="/formCadCliente"><span class="material-symbols-outlined">person_add</span></a>
+            <section id="menu">
+                <!-- <a href="/formCadCliente"><span class="material-symbols-outlined">person_add</span></a> -->
+                <div id="bt_add_cliente" onclick="addCliente()" class="bt_menu"><span class="material-symbols-outlined">person_add</span></div>
+            </section>
             <div id="container_clientes">
 
             </div>
+            <section id="containerCadCliente" class="hidden">
+                <form action="/cliente" method="post">
+                    <h1>CADASTRO DE CLIENTE</h1>
+                    <label>Nome:
+                        <input type="text" name="nome" />
+                    </label>
+                    <label>E-mail:
+                        <input type="text" name="email" />
+                    </label>
+                    <input class="bt_form" type="submit" value="Enviar" />
+                    <input class="bt_form" type="reset" value="Limpar" />
+                </form>
+            </section>
         </main>
     </body>
 </html>

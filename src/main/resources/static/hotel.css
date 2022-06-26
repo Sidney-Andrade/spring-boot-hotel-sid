@@ -1,8 +1,15 @@
+body.overlay{
+    background: rgba(0, 0, 0, .5);
+}
+.hidden{
+    display: none!important;
+}
 main{
     width: 850px;
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
+    position: relative;
 }
 .linha{
     display: grid;
@@ -27,4 +34,48 @@ main{
 }
 a{
     color: #000;
+}
+.bt_menu {
+    display: block;
+    width: 180px;
+    height: 25px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+body form input.bt_form{
+    width: 80px!important;
+    height: 25px;
+    text-align: center;
+    border-radius: 5px;
+}
+#containerCadCliente{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+#containerCadCliente form{
+    width: 350px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+}
+#containerCadCliente form h1{
+    text-align: center;
+    color: #FFF;
+}
+#containerCadCliente form label{
+    color: #FFF;
+    display: inline-block;
+}
+#containerCadCliente form input{
+    display: block;
+    width: 200px;
+    margin-bottom: 10px;
 }

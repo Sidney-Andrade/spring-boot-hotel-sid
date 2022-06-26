@@ -57,3 +57,8 @@ function deletar(id){
         }
     })
 }
+
+function addCliente(){
+    $("#containerCadCliente").removeClass("hidden");
+    $("body").addClass("overlay");
+}
