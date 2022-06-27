@@ -80,3 +80,8 @@ function editar(id){
         }
     })
 }
+
+function fechar(){
+    $("#containerCadCliente").addClass("hidden");
+    $("body").removeClass("overlay");
+}

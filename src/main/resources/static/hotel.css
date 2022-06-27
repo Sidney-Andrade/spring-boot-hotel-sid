@@ -37,10 +37,14 @@ a{
 }
 .bt_menu {
     display: block;
-    width: 180px;
+    width: 20px;
     height: 25px;
-    padding: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
     text-align: center;
+    cursor: pointer;
+}
+.title span{
     cursor: pointer;
 }
 body form input.bt_form{
