@@ -36,9 +36,9 @@ public class ClienteController {
     @GetMapping("/{id}")
     public Cliente buscarPorId(@PathVariable Long id){
         Optional<Cliente> clienteOpcional = clienteRepository.findById(id);
-        if(clienteOpcional.isPresent()){
-           throw new ResponseStatusException(HttpStatus.NOT_FOUND) ;
-        }
+        // if(clienteOpcional.isPresent()){
+        //    throw new ResponseStatusException(HttpStatus.NOT_FOUND) ;
+        // }
         
         return clienteOpcional.get();
     }

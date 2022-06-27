@@ -20,11 +20,12 @@
             <section id="containerCadCliente" class="hidden">
                 <form action="/cliente" method="post">
                     <h1>CADASTRO DE CLIENTE</h1>
+                    <input type="hidden" name="id" id="id_cliente">
                     <label>Nome:
-                        <input type="text" name="nome" />
+                        <input type="text" name="nome" id="nome"/>
                     </label>
                     <label>E-mail:
-                        <input type="text" name="email" />
+                        <input type="text" name="email" id="email"/>
                     </label>
                     <input class="bt_form" type="submit" value="Enviar" />
                     <input class="bt_form" type="reset" value="Limpar" />

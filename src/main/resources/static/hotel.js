@@ -14,7 +14,7 @@ function listar(){
                 
                 //via delete
                 $(`<div class='item remover'><a href="#" onclick="deletar(${value.id})"><span class='material-symbols-outlined'>delete</span></a></div>`).appendTo($(linha));
-                $(`<div class='item editar'><a href=cliente/editar/${value.id}><span class="material-symbols-outlined">edit</span></a></div>`).appendTo($(linha));
+                $(`<div class='item editar'><a href="#"  onclick="editar(${value.id})"><span class="material-symbols-outlined">edit</span></a></div>`).appendTo($(linha));
                 $(linha).attr("_id",value.id);
                 $(linha).appendTo("#container_clientes");
             })
@@ -61,4 +61,22 @@ function deletar(id){
 function addCliente(){
     $("#containerCadCliente").removeClass("hidden");
     $("body").addClass("overlay");
+}
+function editar(id){
+    $.ajax({
+        type:"GET",
+        dataType:"json",
+        url:"/cliente/" + id,
+        success: function (data) {
+            addCliente();
+            $("#containerCadCliente").find("#id_cliente").val(data.id);
+            $("#containerCadCliente").find("#nome").val(data.nome);
+            $("#containerCadCliente").find("#email").val(data.email);
+        },
+        error: function (data) {
+            alert("Ops! algo deu errado ao carregar os dados dos clientes");
+        },
+        beforeSend: function () {
+        }
+    })
 }
